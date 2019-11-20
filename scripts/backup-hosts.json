@@ -1,0 +1,91 @@
+{
+	"hosts": [
+		{
+			"name": "kenny",
+			"address": "kenny.marlboro.edu",
+			"ssh": {
+				"backup_to_host": {
+					"username": "root",
+					"key": "/root/.ssh/valise.marlboro.edu",
+					"password": ""
+				}
+    	},
+			"backup_frequency": "daily",
+			"containers": {
+				"glimmer" : {
+					"backup": {
+						"frequency": "daily",
+						"exclude": [
+							"/var/spool/apt-mirror/*"
+						]
+					}
+				}
+			}
+		},
+		{
+			"name": "titan",
+			"address": "titan.marlboro.edu",
+			"ssh": {
+				"backup_to_host": {
+					"username": "root",
+					"key": "/root/.ssh/valise.marlboro.edu",
+					"password": ""
+				}	
+			},
+			"backup_frequency": "daily",
+			"containers": {}
+		},
+		{
+			"name": "europa",
+			"address": "europa.marlboro.edu",
+			"ssh": {
+				"backup_to_host": {
+					"username": "root",
+					"key": "/root/.ssh/valise.marlboro.edu",
+					"password": ""
+				}
+			},
+			"backup_frequency": "daily",
+			"containers": {}
+		},
+    {
+      "name": "jupiter",
+      "address": "jupiter.marlboro.edu",
+      "ssh": {
+        "backup_to_host": {
+          "username": "root",
+          "key": "/root/.ssh/valise.marlboro.edu",
+          "password": ""
+        }
+      },
+      "backup_frequency": "daily",
+      "containers": {}
+    },
+    {
+      "name": "ganymede",
+      "address": "ganymede.marlboro.edu",
+      "ssh": {
+        "backup_to_host": {
+          "username": "root",
+          "key": "/root/.ssh/valise.marlboro.edu",
+          "password": ""
+        }
+      },
+      "backup_frequency": "daily",
+      "containers": {}
+    },
+    {
+      "name": "lime",
+      "address": "lime.marlboro.edu",
+      "ssh": {
+        "backup_to_host": {
+          "username": "root",
+          "key": "/root/.ssh/valise.marlboro.edu",
+          "password": ""
+        }
+      },
+      "backup_frequency": "daily",
+      "containers": {}
+    }
+	]
+}

@@ -1,0 +1,54 @@
+{
+	"local_info": {
+		"username": "root",
+		"hostname": "backup.example.com"
+	},
+	"hosts_settings": {
+		"config_file": "backup-hosts.json",
+		"default": {
+			"backup": {
+				"frequency": "daily",
+				"folder": "/vault/backup",
+				"exclude": [
+					"/dev/*",
+					"/proc/*",
+					"/sys/*",
+					"/tmp/*",
+					"/run/*",
+					"/mnt/*",
+					"/media/*",
+					"/lost+found",
+					"/var/lib/lxd/storage-pools/*/containers/",
+					"/var/lib/lxc/*"
+				]
+			},
+			"rotate": {
+				"copies": 31,
+				"folder": "/vault/rotate"
+			}
+		}
+	},
+	"container_settings": {
+		"backup": {
+			"frequency": "daily",
+			"exclude":""
+		},
+		"snapshot": {
+			"frequency": "never"
+		}
+	},
+	"notifications": {
+		"sender": "mailer@example.com",
+		"receiver": "me@example.com"
+	},
+	"logger": {
+		"mysql": {
+			"enabled": true,
+			"host": "db.backup.example.com",
+			"user": "lxc",
+			"password": "YOUR MYSQL PASSWORD",
+			"database": "lxc"
+		}
+	},
+	"debug": true
+}
